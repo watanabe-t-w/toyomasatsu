@@ -1,0 +1,245 @@
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=date],
+input[type=month],
+input[type=search]
+{
+  appearance: none;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  color: #333;
+  display: inline-block;
+  max-width: 100%;
+  padding: .5em;
+  width:  auto;
+}
+
+input:not([type=date], [type=month], [type=submit], [type=radio], [type=button]) {
+  width: 100%;
+}
+
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=search]:focus {
+  background-color: rgb(244, 250, 255);
+  border: solid 1px rgb(35, 35, 91);
+  outline: none;
+}
+
+textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  display: block;
+  height: auto;
+  line-height: 1.4;
+  padding: .25em .5em;
+  width: 100%;
+}
+textarea:focus {
+  background-color: rgb(244, 250, 255);
+  border: solid 1px rgb(35, 35, 91);
+  outline: none;
+}
+
+
+/* button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  display: inline-block;
+  border: solid 1px #ccc;
+  text-decoration: none;
+  padding: .5em 1em;
+  background-color: #333;
+  color:#fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+button:hover,
+[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover {
+  background-color: #555;
+} */
+
+
+/* リセットされていたので適当にフォーム要素のスタイル指定 */
+
+.bl_privacy {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+.bl_privacy ol {
+  list-style-type:decimal;
+  padding-left: 1.5em;
+  margin-top: 1em;
+}
+.bl_privacy ol li + li {
+  margin-top: .5em;
+}
+
+/* 作業的に幅狭くしたかったので追加 */
+.ly_container_contact {
+  width: calc(800px + 8vw);
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: 4vw;
+
+  background-image: none;
+}
+
+/* フォーム要素レイアウト  */
+.bl_form {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.bl_form .bl_form_label {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1;
+  margin-bottom: 5px;
+
+  align-items: center;
+}
+.bl_form .bl_form_label .ttl {
+  font-size: 15px;
+  font-weight: bold;
+  padding: .5em 0;
+}
+.bl_form .bl_form_label .must {
+  /* display: flex; */
+  /* align-items: center; */
+  /* background-color: #c80000; */
+  /* color:#fff; */
+  /* padding: .5em; */
+  color: #ff1d25;
+  margin-left: .5em;
+  font-size: 12px;
+}
+
+/* ボタン */
+.contact-btn2,
+.contact-btn {
+  -webkit-appearance: none;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  font-size: 15px;
+  display: inline-block;
+  border: 0;
+  padding: .5em 1.5em;
+  text-decoration: none;
+  background-color: #0e156b;
+  border: 1px solid #0e156b;
+  color: #fff;
+  /* margin-top: 30px; */
+  /* margin-bottom: 50px; */
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+.contact-btn2:hover,
+.contact-btn:hover {
+  /* opacity: .7; */
+  background-color: #fff;
+  color: #0e156b;
+}
+.contact-btn2:focus,
+.contact-btn:focus {
+  background-color: #fff;
+  color: #0e156b;
+}
+.contact-btn2:disabled,
+.contact-btn:disabled {
+  border: 1px solid #dcdddd;
+  background-color: #dcdddd;
+}
+
+/* エラー表示 */
+.form-check {
+  padding: .5em .5em;
+  display: none;
+  &.is-success {
+    display: block;
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: .5em;
+  }
+  &.is-error {
+    display: block;
+    /*background-color: #ffefee;*/
+    /*color: #d9534f;*/
+    color:red;
+    background-color: rgb(255, 226, 226);
+    padding: .5em;
+  }
+}
+.form-check.txt_all_error {
+  white-space: pre-line;
+}
+
+.confirm-text {
+  background-color:#fff;
+  border: 1px solid #333;
+  background-color: #eee;
+  padding: .5em;
+}
+
+.heading {
+  margin-bottom: 30px;
+  padding-bottom: 6px;
+  font-size: 24px;
+  font-weight: normal;
+  border-bottom: solid 2px #ccc;
+}
+
+.zip-btn {
+  display: inline-block;
+  margin-left: .5em;
+  padding-block: 4px;
+  padding-inline: .5em;
+  font-size: 15px;
+  color: #fff;
+}
+
+.zip-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.zip-btn:not(:disabled) {
+  background-color: #0e156b;
+  cursor: pointer;
+}
+
+.sentaku-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 6px;
+  row-gap: 10px;
+  margin-top: 30px;
+}
+
+.btn-wrapper.center {
+  justify-content: center;
+}
